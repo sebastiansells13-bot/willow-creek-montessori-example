@@ -1,0 +1,22 @@
+---
+layout: layouts/page.njk
+title: Programs
+permalink: /programs/
+---
+<div class="wrapper" style="padding-top:3rem;">
+  <div class="section-heading">
+    <h1>Our Programs</h1>
+  </div>
+</div>
+<section class="section" style="padding-top:0;">
+  <div class="wrapper program-grid">
+    {% for p in programs.list %}
+    <div class="program-card">
+      <div class="program-card__badge" style="background:{{ p.color }};">{{ p.badge }}</div>
+      <h3>{{ p.name }}</h3>
+      <p><strong>{{ p.ages }}</strong></p>
+      <p>{{ p.description }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

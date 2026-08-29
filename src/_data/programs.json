@@ -1,0 +1,8 @@
+{
+  "list": [
+    { "id": "toddler", "name": "Toddler Community", "ages": "18 months – 3 years", "dailyRate": 62, "color": "#f8b4c0", "badge": "TC", "description": "A gentle, low-ratio introduction to the classroom — lots of movement, lots of patience." },
+    { "id": "primary", "name": "Primary", "ages": "3 – 6 years", "dailyRate": 54, "color": "#a8d8ea", "badge": "P", "description": "The classic mixed-age Montessori classroom, practical life work through kindergarten." },
+    { "id": "lower-elementary", "name": "Lower Elementary", "ages": "6 – 9 years", "dailyRate": 48, "color": "#ffe08a", "badge": "LE", "description": "Big questions, real research projects, and a lot more independence." },
+    { "id": "upper-elementary", "name": "Upper Elementary", "ages": "9 – 12 years", "dailyRate": 45, "color": "#b8e6c9", "badge": "UE", "description": "Student-led projects, peer teaching, and prep for the transition to middle school." }
+  ]
+}

@@ -1,0 +1,57 @@
+---
+layout: layouts/page.njk
+title: Tuition Calculator
+permalink: /tuition/
+---
+<div class="wrapper" style="padding-top:3rem;">
+  <div class="section-heading">
+    <h1>Tuition Calculator</h1>
+    <p>A rough monthly estimate — enrollment always starts with a real conversation, not a form.</p>
+  </div>
+</div>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrapper calc">
+    <div class="calc-form">
+      <label for="program-select">Program</label>
+      <select id="program-select">
+        {% for p in programs.list %}
+        <option value="{{ p.id }}" data-rate="{{ p.dailyRate }}">{{ p.name }} ({{ p.ages }})</option>
+        {% endfor %}
+      </select>
+
+      <label>Days per week</label>
+      <div class="day-picker" id="days-picker">
+        <button type="button" data-days="2">2</button>
+        <button type="button" data-days="3">3</button>
+        <button type="button" data-days="4">4</button>
+        <button type="button" data-days="5" class="selected">5</button>
+      </div>
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="aftercare-check">
+        <label for="aftercare-check" style="margin:0;">Add after-care ({{ business.afterCareFee | money }}/mo)</label>
+      </div>
+    </div>
+
+    <div class="calc-result">
+      <h3 style="margin-top:0;">Estimate</h3>
+      <div class="calc-result__row"><span>Daily rate</span><span id="r-rate">$0</span></div>
+      <div class="calc-result__row"><span>Days / week</span><span id="r-days">5</span></div>
+      <div class="calc-result__row"><span>After-care</span><span id="r-aftercare">$0</span></div>
+      <div class="calc-result__total">
+        <span>Estimated monthly</span>
+        <span class="amount" id="r-total">$0</span>
+      </div>
+      <p class="calc-disclaimer">
+        Based on ~4.33 weeks/month. Sibling discounts and financial aid aren't
+        reflected here — <a href="/contact/">reach out</a> and we'll walk through
+        the real numbers.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  window.TUITION_CONFIG = { afterCareFee: {{ business.afterCareFee }} };
+</script>

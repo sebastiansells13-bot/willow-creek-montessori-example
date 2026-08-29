@@ -1,0 +1,22 @@
+---
+layout: layouts/page.njk
+title: Our Staff
+permalink: /staff/
+---
+<div class="wrapper" style="padding-top:3rem;">
+  <div class="section-heading">
+    <h1>Our Staff</h1>
+    <p>Every lead guide is AMI or AMS certified for their classroom's age group.</p>
+  </div>
+</div>
+<section class="section" style="padding-top:0;">
+  <div class="wrapper staff-grid">
+    {% for member in staff.list %}
+    <div class="staff-card">
+      <div class="avatar" style="background:{{ member.color }};">{{ member.initials }}</div>
+      <h3>{{ member.name }}</h3>
+      <p>{{ member.role }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,42 @@
+---
+layout: layouts/page.njk
+title: Home
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+<div class="hero">
+  <div class="blob" style="width:22rem; height:22rem; background:#ffe08a; top:-6rem; left:-8rem;"></div>
+  <div class="blob" style="width:16rem; height:16rem; background:#a8d8ea; bottom:-4rem; right:-4rem;"></div>
+  <div class="wrapper">
+    <h1>{{ business.name }}</h1>
+    <p>{{ business.tagline }}</p>
+    <a href="/tuition/" class="btn">Estimate Tuition</a>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrapper">
+    <div class="section-heading">
+      <h2>Our Programs</h2>
+      <p>Four classrooms, one philosophy: children learn best when they choose their own work.</p>
+    </div>
+    <div class="program-grid">
+      {% for p in programs.list %}
+      <div class="program-card">
+        <div class="program-card__badge" style="background:{{ p.color }};">{{ p.badge }}</div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.ages }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#fff;">
+  <div class="wrapper" style="text-align:center;">
+    <h2>Curious what it costs?</h2>
+    <p style="max-width:32rem; margin:0 auto 1.5rem; opacity:0.75;">Pick a program and a schedule — get an estimate in about ten seconds.</p>
+    <a href="/tuition/" class="btn">Try the Tuition Calculator</a>
+  </div>
+</section>

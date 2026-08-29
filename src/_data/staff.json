@@ -1,0 +1,9 @@
+{
+  "list": [
+    { "name": "Dana Okafor", "role": "Lead Guide, Primary", "initials": "DO", "color": "#f8b4c0" },
+    { "name": "Priya Nair", "role": "Lead Guide, Toddler Community", "initials": "PN", "color": "#a8d8ea" },
+    { "name": "Sam Whitfield", "role": "Lead Guide, Lower Elementary", "initials": "SW", "color": "#ffe08a" },
+    { "name": "Reyna Cole", "role": "Lead Guide, Upper Elementary", "initials": "RC", "color": "#b8e6c9" },
+    { "name": "Marcus Diallo", "role": "School Director", "initials": "MD", "color": "#e8798e" }
+  ]
+}
